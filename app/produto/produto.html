@@ -1,0 +1,26 @@
+<button ui-sref="app.createProduto" type="button" class="pull-right btn btn-primary">
+    Create Produto
+</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Descricao</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="produto in vm.produtos">
+      <td>
+        <button ui-sref="app.editProduto({produtoId: produto.$id})" class="btn btn-link">{{produto.$id}}</button>
+      </td>  
+      <td>{{produto.name}}</td>
+      <td>{{produto.descricao}}</td>
+      <td>
+        <button ng-click="vm.remove(produto)" class="btn btn-link">Excluir</button>
+        <button ng-click="vm.update(produto)" class="btn btn-link">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

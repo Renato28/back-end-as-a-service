@@ -1,0 +1,15 @@
+<div class="login wrapper fadeInDown">
+  <h1>BaaS Front-End</h1>
+  <div id="formContent">
+    <form>
+      <input type="text" id="login" ng-model="user.email" class="fadeIn second" name="login" placeholder="Login">
+      <input type="password" id="password" ng-model="user.password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" ng-click="vm.doLogin(user)" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>

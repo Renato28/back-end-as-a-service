@@ -1,0 +1,11 @@
+<div class="produto wrapper">
+  <form class="col-md-6">
+    <label>Nome</label>
+    <input type="text" ng-model="produto.name" placeholder="Nome" class="form-control">
+    <label>Descricao</label>
+    <input type="text" ng-model="produto.descricao" placeholder="Descricao" class="form-control">
+    <button ng-click="vm.create(produto)" ng-disabled="!(produto.name && produto.descricao)" class="pull-right btn btn-success">
+      Save
+    </button>
+  </form>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="baas-front-end">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BaaS Front-End</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <ui-view></ui-view>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="./bower_components/firebase/firebase.js"></script>
+    
+    <script src="./app.js"></script>
+    <script src="./app.core.js"></script>
+    <script src="./app.config.js"></script>
+    <script src="./app.controller.js"></script>
+
+    <script src="./home/home.js"></script>
+    <script src="./home/home.config.js"></script>
+    <script src="./home/home.controller.js"></script>
+
+    <script src="./produto/produto.js"></script>
+    <script src="./produto/produto.config.js"></script>
+    <script src="./produto/produto.factory.js"></script>
+    <script src="./produto/produto.controller.js"></script>
+    <script src="./produto/create.controller.js"></script>
+    <script src="./produto/edit.controller.js"></script>
+
+    <script src="./login.factory.js"></script>
+    <script src="./login.controller.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyABRBryZKM_vUyjOXPZ8S6H3b3-EjCe_0A",
+          authDomain: "projeto-dcfa1.firebaseapp.com",
+          databaseURL: "https://projeto-dcfa1.firebaseio.com",
+          projectId: "projeto-dcfa1",
+          storageBucket: "projeto-dcfa1.appspot.com",
+          messagingSenderId: "994301658161"
+        };
+        firebase.initializeApp(config);
+      </script>
+</body>
+</html>
