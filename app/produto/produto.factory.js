@@ -15,7 +15,8 @@
         findAll: findAll,
         findOne: findOne,
         create: create,
-        remove: remove
+        remove: remove,
+        update: update
       };
   
       return service;
@@ -36,11 +37,18 @@
         });
       };
 
+      function update(produto){
+        return produtos.$update(produto).then(function(res){
+
+        });
+      };
+
       function findOne(produtoId) {
         people.$loaded().then(function() {
           console.log("loaded record:", obj.$id, obj.someOtherKeyInData);
   
        });
+       
         var refOne = produtosRef.child(produtoId);
         return $firebaseObject(refOne);
       };

@@ -14,7 +14,7 @@
 
     function doLogin(user) {
       loginFactory.login(user).then(function(res) {
-        if (res.user.uid) {
+        if (res.uid) {
           $state.go('app.home');
         }
       }).catch(function (error) {
