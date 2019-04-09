@@ -16,7 +16,7 @@
         findOne: findOne,
         create: create,
         remove: remove,
-        update: update
+        update: update,
       };
   
       return service;
@@ -38,13 +38,13 @@
       };
 
       function update(produto){
-        return produtos.$update(produto).then(function(res){
+        return produtos.$update(produto).then(function(ref){
 
         });
       };
 
       function findOne(produtoId) {
-        people.$loaded().then(function() {
+        produtos.$loaded().then(function() {
           console.log("loaded record:", obj.$id, obj.someOtherKeyInData);
   
        });
