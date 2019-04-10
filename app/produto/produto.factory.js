@@ -16,7 +16,7 @@
         findOne: findOne,
         create: create,
         remove: remove,
-        update: update,
+        update: update
       };
   
       return service;
@@ -36,6 +36,12 @@
         return produtos.$remove(produto).then(function(ref) {
         });
       };
+
+      function update(produto){
+        return produtos.$update(produto).then(function(res){
+
+        })
+      }
 
       function findOne(produtoId) {
         produtos.$loaded().then(function() {
