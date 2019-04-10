@@ -24,7 +24,7 @@
     }
 
     function update(produto){
-      produtoFactory.update(produto).then(function(res){
+      produtoFactory.update(produto).then(function(res) {
         console.log('updated');
       }).catch(function(error){
         console.log(error)

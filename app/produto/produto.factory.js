@@ -13,10 +13,10 @@
 
     var service = {
       findAll: findAll,
-      findOne: findOne,
       create: create,
       remove: remove,
-      update: update
+      update: update,
+      findOne: findOne
     };
 
     return service;
@@ -45,8 +45,8 @@
         console.log("loaded record:", obj.$id, obj.someOtherKeyInData);
 
      });
-      // var refOne = peopleRef.child(personId);
-      // return $firebaseObject(refOne);
+      var refOne = produtosRef.child(produtoId);
+      return $firebaseObject(refOne);
     };
 
   }
