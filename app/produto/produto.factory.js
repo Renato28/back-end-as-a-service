@@ -36,11 +36,7 @@
         return produtos.$remove(produto).then(function(ref) {
         });
       };
-
-      function update(produto){
-        return produtos.$update(produto).then(function(ref){
-
-        });
+      
       };
 
       function findOne(produtoId) {
