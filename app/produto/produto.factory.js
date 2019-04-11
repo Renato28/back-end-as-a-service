@@ -10,13 +10,12 @@
     var produtosRef = firebase.database().ref('produtos');
     var produtos = $firebaseArray(produtosRef);
     
-
     var service = {
       findAll: findAll,
+      findOne: findOne,
       create: create,
       remove: remove,
-      update: update,
-      findOne: findOne
+      update: update
     };
 
     return service;
@@ -33,21 +32,26 @@
     };
 
     function remove(produto) {
-      return produtos.$remove(produto).then(function(ref) {});
+      return produtos.$remove(produto).then(function(ref) {
+        produto.firebaseId = ref.key;
+      });
     };
 
-    function update(produto){
-      return produtos.$update(produto).then(function(ref) {});
+    function update(produto) {
+      return produtos.$save(produto).then(function(ref){
+        produto.firebaseId = ref.key;
+      });
     };
 
     function findOne(produtoId) {
       produtos.$loaded().then(function() {
         console.log("loaded record:", obj.$id, obj.someOtherKeyInData);
-
-     });
+      
+     }); 
       var refOne = produtosRef.child(produtoId);
       return $firebaseObject(refOne);
     };
 
-  }
+      }
+
 })();

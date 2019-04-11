@@ -10,7 +10,6 @@
   function CreateProdutoCtrl(produtoFactory, $state) {
     var vm = this;
     vm.create = create;
-
     activate();
 
     function create(produto) {
